@@ -2,7 +2,7 @@
 
 void InitList(int* oneDimensionalArray)
 {
-	oneDimensionalArray = malloc(sizeof(MaxLength * sizeof(int)));
+	oneDimensionalArray = calloc(sizeof(MaxLength, sizeof(int));
 
 	return;
 }
@@ -26,10 +26,27 @@ int LocateElem(int* oneDimensionalArray, int elemVal, int arraySize)
 	return elemLoc;
 }
 
-int GetElem(int* oneDimensionalArray, int elemLoc);
+int GetElem(int* oneDimensionalArray, int elemLoc, int arraySize)
+{
+	int elemVal = 0;
+
+	if (elemLoc < 0 || elemLoc >= arraySize) {
+		return;
+	}
+
+	elemVal = oneDimensionalArray[elemLoc];
+
+	return elemVal;
+}
 
 
-void InsertElem(int* oneDimensionalArray, int elemLoc, int elemVal);
+void InsertElem(int* oneDimensionalArray, int elemLoc, int elemVal)
+{
+
+
+	return;
+}
+
 void DeleteElem(int* oneDimensionalArray, int elemLoc, int* returnElemVal);
 void PrintList(int* oneDimensionalArray);
 bool IsEmpty(int* oneDimensionalArray);
