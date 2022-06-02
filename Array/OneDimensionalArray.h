@@ -6,8 +6,8 @@
 
 #define MaxLength 100
 
-void InitList(int* oneDimensionalArray);
-int Length(int* oneDimensionalArray, int* arraySize);
+int* InitList(int* oneDimensionalArray);
+int Length(int* oneDimensionalArray);
 /*
 ----2022/6/1----
 没必要
@@ -20,13 +20,17 @@ int Length(int* oneDimensionalArray, int* arraySize);
 C Primer Plus中的变长数组指的就是动态开辟的数组
 但数组长度还是在创建时指定
 数组长度并不会在生命周期内发生变化
-
-
 */
-int LocateElem(int* oneDimensionalArray, int elemVal, int arraySize);
-int GetElem(int* oneDimensionalArray, int elemLoc, int arraySize);
+
+/*
+----2022/6/2----
+将数组初始化为0，且认为插入数组的值不能为0
+重写Length函数
+*/
+int LocateElem(int* oneDimensionalArray, int elemVal);
+int GetElem(int* oneDimensionalArray, int elemLoc);
 void InsertElem(int* oneDimensionalArray, int elemLoc, int elemVal);
 void DeleteElem(int* oneDimensionalArray, int elemLoc, int* returnElemVal);
 void PrintList(int* oneDimensionalArray);
 bool IsEmpty(int* oneDimensionalArray);
-void DestoryList(int* oneDimensionalArray);
+void DestoryList(int** oneDimensionalArray);
