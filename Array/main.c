@@ -1,5 +1,4 @@
 #include "main.h"
-#include "OneDimensionalArray.h"
 
 int main() {
 	//简单测试，有空再加界面
